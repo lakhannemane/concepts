@@ -52,3 +52,20 @@
 body{
   background-color: #f1f7f7;
 }
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+tfoot td{
+  background-color: red;
+}
+
+tr:hover {background-color: coral;}
