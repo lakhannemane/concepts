@@ -3,6 +3,7 @@ import Button from "./Button/index";
 import Card from "./Card/index";
 import BasicTable from "./Component/BasicTable";
 import Filtering from "./Component/Filtering";
+import PaginationTable from "./Component/PagintionTable";
 import SortingTable from "./Component/SortingTable";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
   ];
   return (
     <div className="App">
-      <Filtering />
+      <PaginationTable />
     </div>
   );
 }
