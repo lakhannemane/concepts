@@ -1,26 +1,26 @@
 // import NewComponent from "./components/NewComponent";
-import Button from "./Button/index";
-import Card from "./Card/index";
-import BasicTable from "./Component/BasicTable";
-import Filtering from "./Component/Filtering";
-import PaginationTable from "./Component/PagintionTable";
-import SortingTable from "./Component/SortingTable";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import ElementData from "./Route/Route";
 
 function App() {
-  const menuList = [
-    { name: "Dashboard", icon: "" },
-    { name: "Farm", icon: "" },
-    { name: "Alerts", icon: "" },
-  ];
-  const menuList2 = [
-    { name: "Automate", icon: "" },
-    { name: "Settings", icon: "" },
-    { name: "Profile", icon: "" },
-    { name: "Logout", icon: "" },
-  ];
   return (
     <div className="App">
-      <PaginationTable />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <button>
+                {" "}
+                <Link to="/hitesh"> go to hitesh</Link>
+              </button>
+            }
+          />
+          {ElementData?.map((ele) => (
+            <Route path={ele.path} element={ele.element} />
+          ))}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
